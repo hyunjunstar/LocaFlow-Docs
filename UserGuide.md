@@ -165,6 +165,14 @@ What is protected:
 **Privacy:** the source text of the selected entries is sent to the provider you configure. Nothing is sent unless you
 press *Translate Missing* and confirm.
 
+**Review the results:** machine translations are drafts. LocaFlow protects arguments, plural / gender / hpp blocks and
+rich text tags, but it does not judge wording or tone, so have a person review them and run QA before you ship.
+
+**Verification status:** translation through DeepL was tested against the live DeepL API on UE 5.5 and 5.8
+(translation, placeholder and tag preservation, save and reload, invalid key, cancel). For OpenAI-compatible
+endpoints, the request flow, error handling (invalid key, no credit) and cancel were checked against the live OpenAI
+API, but a successful live translation through an OpenAI-compatible service has not been verified yet.
+
 ## 9. Text overflow
 
 Open the **Overflow** tab.

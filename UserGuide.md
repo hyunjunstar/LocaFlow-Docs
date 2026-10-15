@@ -24,7 +24,7 @@ working as before.
 | | |
 |---|---|
 | Engine | Unreal Engine 5.5 and 5.8 |
-| Platform (editor) | Windows 64-bit (tested). Mac and Linux are built from the same code but not tested by us yet. |
+| Platform | Windows 64-bit (Win64) only, for the editor and for packaged games. |
 | Project | Any project (Blueprint or C++) with at least one localization target that has been **gathered** once. |
 | Network | Only for machine translation (optional). All QA features work offline. |
 
@@ -107,8 +107,8 @@ Open the **Font Wizard** tab.
 2. Press **Check glyphs**. LocaFlow tests every character used by the current culture's translations against the
    font's default typeface, fallback typeface and sub-fonts (respecting their character ranges) and lists the
    characters that cannot be drawn.
-3. To fix it, either press **Use system font** (Windows: Malgun Gothic / Yu Gothic / Microsoft YaHei or JhengHei, Mac: Apple SD
-   Gothic Neo / Hiragino / PingFang, Linux: Noto CJK) or **Browse...** to any .ttf / .otf / .ttc file, then
+3. To fix it, either press **Use system font** (Malgun Gothic / Yu Gothic / Microsoft YaHei or
+   JhengHei) or **Browse...** to any .ttf / .otf / .ttc file, then
    **Register fallback**. The font file is imported as a Font Face asset under `/Game/LocaFlow/Fonts` and added to your
    font as a sub-font that covers the culture's script (Hangul, Kana + Kanji, or Hanzi).
 4. Save the font asset (it is marked dirty) and check again – the list should be empty.
@@ -191,7 +191,7 @@ available, and the check needs the normal editor renderer (it is skipped with `-
 
 ## 10. Runtime Blueprint nodes (optional)
 
-Category **LocaFlow**, usable in any game:
+Category **LocaFlow**, usable in any Win64 game:
 
 | Node | Description |
 |---|---|

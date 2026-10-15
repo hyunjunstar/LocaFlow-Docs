@@ -23,7 +23,7 @@ LocaFlow는 **Localization Dashboard**가 만드는 표준 파일(`Content/Local
 | | |
 |---|---|
 | 엔진 | 언리얼 엔진 5.5, 5.8 |
-| 에디터 플랫폼 | Windows 64비트(테스트 완료). Mac·Linux는 같은 코드로 빌드되지만 아직 테스트하지 않았습니다. |
+| 플랫폼 | Windows 64비트(Win64) 전용입니다. 에디터와 패키징한 게임 모두 해당합니다. |
 | 프로젝트 | 블루프린트·C++ 모두 가능. 현지화 타깃을 한 번 이상 **수집(Gather)**해 둬야 합니다. |
 | 네트워크 | 기계 번역에만 필요합니다(선택). 검사 기능은 모두 오프라인으로 동작합니다. |
 
@@ -105,8 +105,7 @@ LocaFlow에서 **Reload**를 누르세요.
    *에디터 환경설정 → 플러그인 → LocaFlow → Reference Font*에서 정할 수 있습니다.
 2. **Check glyphs**를 누릅니다. 현재 문화권 번역에 쓰인 모든 글자를 폰트의 기본 서체·폴백 서체·서브 폰트
    (각 서브 폰트의 글자 범위 포함)로 그릴 수 있는지 검사하고, 그릴 수 없는 글자를 보여 줍니다.
-3. 고치려면 **Use system font**(Windows: 맑은 고딕 / Yu Gothic / Microsoft YaHei·JhengHei, Mac: Apple SD Gothic Neo /
-   Hiragino / PingFang, Linux: Noto CJK)를 누르거나, **Browse...**로 .ttf / .otf / .ttc 파일을 고른 뒤
+3. 고치려면 **Use system font**(맑은 고딕 / Yu Gothic / Microsoft YaHei·JhengHei)를 누르거나, **Browse...**로 .ttf / .otf / .ttc 파일을 고른 뒤
    **Register fallback**을 누릅니다. 폰트 파일이 `/Game/LocaFlow/Fonts`에 Font Face 에셋으로 들어가고,
    그 문화권의 문자(한글, 가나+한자, 중국어 한자) 범위를 맡는 서브 폰트로 추가됩니다.
 4. 폰트 에셋을 저장하고(변경 표시가 됩니다) 다시 검사하면 목록이 비어 있어야 합니다.
@@ -186,7 +185,7 @@ Rich Text Block에 필요한 크기와 실제 크기를 비교합니다. 결과�
 
 ## 10. 런타임 블루프린트 노드 (선택)
 
-카테고리 **LocaFlow**, 게임 어디서나 쓸 수 있습니다.
+카테고리 **LocaFlow**, Win64 게임 어디서나 쓸 수 있습니다.
 
 | 노드 | 설명 |
 |---|---|
